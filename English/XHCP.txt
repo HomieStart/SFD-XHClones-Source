@@ -1,4 +1,4 @@
-// ====================== XHOMIE CODE V1.2 ==============================> 
+/// ====================== XHOMIE CODE V1.2 ==============================> 
 // =====================================================================>
 // ===== If you liked the "XHomieClonesParty", you can contact me, ==============>
 // ==============  I will be delighted to attend thanks to  ====================>
@@ -173,8 +173,8 @@
             if (Lenguaje == "spanish" || Lenguaje == "hispana") {
                 msjr = new String[]{
                     "\n||                      Espero que te Diviertas!!! :)                    ||",
-                    "\n||           Agradesco que te estes divirtiendo              ||\n||                            usando este script :)                           |||",
-                    "\n||      Cualquier cosa, puedes contactarme visita    ||\n||    |XHomieClonesParty| en la pagina sfdmaps  :)  ||",
+                    "\n||           Agradesco que te estes divirtiendo              ||\n||                            usando este script :)                           ||",
+                    "\n||      Cualquier cosa, puedes contactarme visita   ||\n||    |XHomieClonesParty| en la pagina sfdmaps  :)  ||",
                     "\n||     Si tu crees que se podria agregarle algo,          ||\n||          A los clones dimelo y diviertete! :)                   ||"
                 };
 
