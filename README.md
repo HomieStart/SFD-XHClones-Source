@@ -43,18 +43,18 @@ Using Atl + D You get your body change clone.
 So whenever you want and also if you are defeated and you have a clone, will spend control.
 beware that you are attacking can on the one hand and on the other your clone
 
-![alt XHomie1](https://github.com/HomieStart/Misc/blob/master/SFD/XHcp/Xhomie3.gif?raw=true "XHomie-SFDCP2")
+![alt XHomie2](https://github.com/HomieStart/Misc/blob/master/SFD/XHcp/Xhomie3.gif?raw=true "XHomie-SFDCP3")
 
 Busca un buen uso de este script para tus partidas personalizadas y diviertetes junto a tus amigos !
 
 Looking for a good use of this script to your custom games and diviertetes with your friends!
 
-![alt XHomie1](https://github.com/HomieStart/Misc/blob/master/SFD/XHcp/Xhomie4.gif?raw=true "XHomie-SFDCP2")
+![alt XHomie3](https://github.com/HomieStart/Misc/blob/master/SFD/XHcp/Xhomie4.gif?raw=true "XHomie-SFDCP4")
 
 Explora nuevas tacticas de combate usando tus clones, que esperas para la batalla!?
 
 Explore new combat tactics using your clones , you expect to battle !?
 
-![alt XHomie1](https://github.com/HomieStart/Misc/blob/master/SFD/XHcp/Xhomie5.gif?raw=true "XHomie-SFDCP2")
+![alt XHomie4](https://github.com/HomieStart/Misc/blob/master/SFD/XHcp/Xhomie5.gif?raw=true "XHomie-SFDCP5")
 
 Copyright © 2015 Freddy XHomie Tr.x.homie@gmail.com
