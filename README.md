@@ -39,7 +39,7 @@ Utilizando Atl+B Consigues cambiar de cuerpo con tu clon.
 Asi cuantas veces quieras y ademas en caso que seas derrotado y tengas un clon, pasaras el control.
 ten cuidado que puede que te esten atacando por un lado y a tu clon por el otro
 
-Using Atl + B You get your body change clone.
+Using Atl + D You get your body change clone.
 So whenever you want and also if you are defeated and you have a clone, will spend control.
 beware that you are attacking can on the one hand and on the other your clone
 
