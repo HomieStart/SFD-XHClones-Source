@@ -13,7 +13,6 @@ Sigue las Intrucciones y espero que te diviertas! :)
 (English)
 Very good dear reader , I would like to thank you for taking the dedication to read this and tell you I like you've wanted to have fun using this script I did.
 I must say that I have endeavored to do and if you have any interest in improving or something to tell me . I will accept gladly your comments.
-Go to fun! :)
 Follow the instructions and have fun! :)
 
 #Instructions
