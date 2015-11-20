@@ -1,0 +1,15 @@
+======================== XHomie Clones Party Intalación ==========================
+Paso 1
+Copia XHCP.txt y pegalo en: " Mis Documentos -> Superfighters Deluxe -> Scripts "
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+Paso 2
+Abrir tu juego en modo Host, jugar y apretar enter para abrir la consola de chat y probar el script 
+con el codigo: " /startscript xhcp "   Sin comillas!
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+Paso 3
+Disfrutar y divertirse :) !
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+PD: En caso que no este la carpeta "Scripts", Creala tu con el mismo nombre.
+
+Para cualquier consulta, problema o sugerencia puedes contactarme via facebook en "XHomie" :)
+===============================================================================

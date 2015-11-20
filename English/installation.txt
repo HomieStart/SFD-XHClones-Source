@@ -1,0 +1,15 @@
+===================== Homie Clones Party Installation ===============================
+Step 1
+XHCP.txt copy and paste in "My Documents -> Superfighters Deluxe -> Scripts"
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Step 2
+Open your game in Host mode, play and press enter to open the chat console and test the script
+with the code "/ StartScript xhcp" No quotes!
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Step 3
+Enjoy and have fun! :) 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+PD: Should not this the "Scripts" Believe your folder with the same name.
+
+For any question, problem or suggestion you can contact me by facebook on "XHomie" :)
+===============================================================================
