@@ -178,7 +178,7 @@
                     "\n||     Si tu crees que se podria agregarle algo,          ||\n||          A los clones dimelo y diviertete! :)                   ||"
                 };
 
-                msjB = "\n|| Atl+A = Crear clon / Atl+D = Controlar tu Clon ||";";
+                msjB = "\n|| Atl+A = Crear clon / Atl+D = Controlar tu Clon ||";
             } else {
                 msjr = new String[]{
                     "\n||                           I hope you have fun !!  :)                        ||",
