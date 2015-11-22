@@ -96,6 +96,7 @@
     private void Startup() {
         if (XH10201 && XH10202 && XH10203) {
             wcPP = "XH-1024";
+            Game.RunCommand("/MSG XHomieClonesParty: V1.2");
             msja = false;
         } else {
             if (!XH10200) {
