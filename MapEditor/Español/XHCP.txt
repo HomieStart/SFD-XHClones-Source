@@ -4,8 +4,7 @@
 
 //==== Solo si usas un Trigger Script ! ===============
 
-// --> CopyThisInYouTriggerScript <--- Copia este metodo dentro del metodo de tu triggerscript y colocale que funcione al inicio de la partida
-
+// --> CopyThisInYouTriggerScript <--- Copia este metodo dentro del metodo de tu Scrriptrigger y colocale que funcione al inicio de la partida
 // ====================== XHOMIE CODE V1.2 ==============================> 
 // =====================================================================>
 // ===== Si te gusto el "XHomieClonesParty", tu puedes contactarme, ==============>
@@ -63,47 +62,12 @@
     private String wcPP;
     private Random random;
     private Color TXTC;
-// ============== initialization ===========>
-
-    public void OnStartup() {
-        listed();
-        if (canClone) {
-            if (OnlyHost) {
-                WantTheBoss();
-                if (AddT_Trigger(segundos * 1000, 0, "OnlyPartyBoss", "XH-10201", true)) {
-                    this.XH10201 = true;
-                }
-            } else {
-                WantTheHomies();
-                if (AddT_Trigger(segundos * 1000, 0, "XHomieParty", "XH-10201", true)) {
-                    this.XH10201 = true;
-                }
-            }
-
-            if (reincarnate) {
-                if (AddT_Trigger(200, 0, "Rencarnation", "XH-10202", true)) {
-                    this.XH10202 = true;
-                }
-            }
-        }
-        if (autoReincarnate) {
-            if (AddD_Trigger("AutoReincarnate", "XH-1023")) {
-                this.XH10203 = true;
-            }
-        }
-        if (SHOWELC) {
-            if (AddT_Trigger(5000, 2, "Wci", "XH-10200", true)) { //2
-                this.XH10200 = true;
-            }
-        }
-        Startup();
-    }
 
 // ===== XCODE === //
 
     private void Startup() {
         if (XH10201 && XH10202 && XH10203) {
-            wcPP = "XH-1024";
+            wcPP = "XH-1024";    
             Game.RunCommand("/MSG XHomieClonesParty: V1.2");
             msja = false;
         } else {
@@ -336,6 +300,8 @@
                 bot.SetHealth(Homies.GetHealth());
             }
             if (cloneSharedItems) {
+                bot.GiveWeaponItem(Homies.CurrentMeleeWeapon.WeaponItem);
+                bot.GiveWeaponItem(Homies.CurrentMeleeMakeshiftWeapon.WeaponItem);
                 bot.GiveWeaponItem(Homies.CurrentPrimaryWeapon.WeaponItem);
                 bot.GiveWeaponItem(Homies.CurrentSecondaryWeapon.WeaponItem);
                 bot.GiveWeaponItem(Homies.CurrentPowerupItem.WeaponItem);
@@ -430,7 +396,6 @@
         pl.Remove();
     }
 
-
     
    public void CopyThisInYouTriggerScript(TriggerArgs args){
         listed();
@@ -501,7 +466,6 @@
         }
         Startup();
     }
-
 
 
     private void Wow(Vector2 Plop) {
