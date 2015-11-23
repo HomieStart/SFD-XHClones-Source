@@ -5,6 +5,10 @@
 //==== Solo si usas un Trigger Script ! ===============
 
 // --> CopyThisInYouTriggerScript <--- Copia este metodo dentro del metodo de tu Scrriptrigger y colocale que funcione al inicio de la partida
+
+
+// =========== y Copia todo el contenido de aqui para abajo sin cambiar nada =========>
+
 // ====================== XHOMIE CODE V1.2 ==============================> 
 // =====================================================================>
 // ===== Si te gusto el "XHomieClonesParty", tu puedes contactarme, ==============>
