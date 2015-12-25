@@ -1,11 +1,11 @@
-	// <=========================== XHOMIE CODE V1.3 ! ===================================> 
+	// <=========================== XHOMIE CODE v1.3 ! ===================================> 
 	// <==================================================================================>
 	// <=========== If you liked the "XHomieClonesParty", you can contact me, ============>
 	// <===========        I will be delighted to attend thanks to            ============>
 	// <===========         suggestions or ideas for new script :)            ============>
 	// <==================================================================================>
 	// <========================    Tr.x.Homie@gmail.com    ==============================>
-	// <======================== © 2015 By Freddy of XHomie ==============================>
+	// <======================== Â© 2015 By Freddy of XHomie ==============================>
 	// <==================================================================================>
 	// < = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = |>
 	// <== IF THiS SERVED FOR YOU, DON'T FORGET NOT TO MENTION AND THANKS GOOD MAN ! :) ==>
@@ -197,7 +197,7 @@
 				} else if (Lenguaje == "spanish") {
 
 					txd = new String[]{
-							"Aaah!","(...)", "Eso dolio P*to!" , "No! no! no!!" , "Coñooooo!", "Oh Nooooo!!", "Mierda!", "Joder !", "Un Manjar", "De P*ta Madre!", "Coño!", "Coño de tu madre!", "La P*ta que te pario!", "Nooooo...", "No!"
+							"Aaah!","(...)", "Eso dolio P*to!" , "No! no! no!!" , "CoÃ±ooooo!", "Oh Nooooo!!", "Mierda!", "Joder !", "Un Manjar", "De P*ta Madre!", "CoÃ±o!", "CoÃ±o de tu madre!", "La P*ta que te pario!", "Nooooo...", "No!"
 					};
 				} else {
 
