@@ -563,16 +563,16 @@
 	}
 
 	private void cleanMachine(){
-		if(Game.GetSingleObjectByCustomID("XH-10201") == null)
+		if(Game.GetSingleObjectByCustomID("XH-10201") != null)
 			if(!Game.GetSingleObjectByCustomID("XH-10201").RemovalInitiated)
 				Game.GetSingleObjectByCustomID("XH-10201").Remove();
-		if(Game.GetSingleObjectByCustomID("XH-10202") == null)
+		if(Game.GetSingleObjectByCustomID("XH-10202") != null)
 			if(!Game.GetSingleObjectByCustomID("XH-10202").RemovalInitiated)
 				Game.GetSingleObjectByCustomID("XH-10202").Remove();
-		if(Game.GetSingleObjectByCustomID("XH-10203") == null)
+		if(Game.GetSingleObjectByCustomID("XH-10203") != null)
 			if(!Game.GetSingleObjectByCustomID("XH-10203").RemovalInitiated)
 				Game.GetSingleObjectByCustomID("XH-10203").Remove();
-		if(Game.GetSingleObjectByCustomID("XH-10200") == null)
+		if(Game.GetSingleObjectByCustomID("XH-10200") != null)
 			if(!Game.GetSingleObjectByCustomID("XH-10200").RemovalInitiated)
 				Game.GetSingleObjectByCustomID("XH-10200").Remove();
 		XH = null;
