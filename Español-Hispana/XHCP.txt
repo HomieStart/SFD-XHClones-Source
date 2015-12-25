@@ -8,7 +8,7 @@
 	// <======================= © 2015 By Freddy of XHomie ===============================>
 	// <==================================================================================>
 	// < = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = |>
-	// <==         SI TE SIRVIO, NO OLVIDES MENCIONAR Y AGRADECER, BUEN HOMBRE ! :)      ==>
+	// <==         SI TE SIRVIO, NO OLVIDES MENCIONAR Y AGRADECER, BUEN HOMBRE ! :)     ==>
 	// < = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = |>
 	public class XHCP{
 		// <======= Setting for you custom game, you can change ==========>
