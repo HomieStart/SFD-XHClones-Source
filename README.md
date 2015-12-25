@@ -1,3 +1,8 @@
+# Change Log
+
+XHCP v1.3 : more optimal and efficient.fix a few small visual details
+XHCP v1.2 : Versión exported of the script for can make Clones in You Game!
+
 # XHOMIE CLONES PARTY!
 XHomie Clones Party in SFDGame !
 
