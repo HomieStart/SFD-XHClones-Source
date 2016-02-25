@@ -1,30 +1,32 @@
-	// <=========================== XHOMIE CODE v1.3 ! ===================================> 
+	// <============================ XHOMIE CODE V1.4 ! ==================================> 
 	// <==================================================================================>
-	// <=========== If you liked the "XHomieClonesParty", you can contact me, ============>
-	// <===========        I will be delighted to attend thanks to            ============>
-	// <===========         suggestions or ideas for new script :)            ============>
+	// <=========== Si te gusto el "XHomieClonesParty", tu puedes contactarme, ===========>
+	// <===========            Yo estare atento a tus comentarios              ===========>
+	// <===========         sugerencias o ideas para nuevos script :)          ===========>
 	// <==================================================================================>
-	// <========================    Tr.x.Homie@gmail.com    ==============================>
-	// <======================== Â© 2015 By Freddy of XHomie ==============================>
+	// <=======================    Tr.x.Homie@gmail.com    ===============================>
+	// <======================= © 2015 By Freddy of XHomie ===============================>
 	// <==================================================================================>
 	// < = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = |>
-	// <== IF THiS SERVED FOR YOU, DON'T FORGET NOT TO MENTION AND THANKS GOOD MAN ! :) ==>
+	// <==         SI TE SIRVIO, NO OLVIDES MENCIONAR Y AGRADECER, BUEN HOMBRE ! :)      ==>
 	// < = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = |>
 	public class XHCP{
-		// <======= Setting for you custom game, you can change =======>
-		private String Lenguaje = "english";
-		private int clonesQuantity = 2; // Quantity clones can be created
-		private int segundos = 1; //interval for creating Clones
-		private bool canClone = true; // if true, you can be creating clones
-		private bool OnlyHost = false; // if true, only host can clone
-		private bool OnPlayer = true; // if clone created in the position of the creator
-		private bool reincarnate = true; // if can reincarnate in the clones
-		private bool autoReincarnate = true; // if can reincarnate in the clone if exist, after die
-		private bool showDialog = true; // if show dialog of player whit clones
-		private bool showDialog2 = true; // if show dialog of player after die
-		private bool clonesLimited = true; // if limit for clones in game
-		private bool cloneSharedItems = false; // if true, clones can give weapos of the creator
-		private bool cloneSharedHealth = true; // if the clone shared health in creating
+		// <======= Setting for you custom game, you can change ==========>
+		private String Lenguaje = "hispana";
+		private int segundos = 1; // Intervalo para crear clones
+		private int clonesQuantity = 2; // Maxima cantidad de clones
+		private int HealthxClone = 15; // Points a reducir
+		private bool reduceHealth = true; // Reducir la energia al crear clon
+		private bool clonesLimited = true; // Si hay limite para los clones
+		private bool canClone = true; // Si es true, puedes clonar
+		private bool OnlyHost = false; // Si es true, solo el dueño del server puede clonar
+		private bool OnPlayer = true; // Si es true, el clon se crea sobre el creador
+		private bool reincarnate = true; // Si puede rencarnar en un clon
+		private bool autoReincarnate = true; // Si puede rencarnar despues de morir
+		private bool showDialog = true; // Si muestran dialago de intercambios con el clon
+		private bool showDialog2 = true; // Si muestra dialogo despues de morir
+		private bool cloneSharedItems = false; // Si los clones tambien compartiran las mismas armas del creador
+		private bool cloneSharedHealth = true; // Si los clones comparten la energia del creador al invocarlos
 
 		// <======= Propeties =========================================>
 		private const bool SHOW_PP_OST = true;
@@ -35,13 +37,13 @@
 		private const String TITULO = "CLONES PARTY";
 		private const String AUTHOR = "XHOMIE";
 		private const String AUTK = "XH-1024";
+		private bool gameStart = false;
 		private IObjectTimerTrigger dialogTimer;
 		private BotType bot_T = BotType.TutorialA;
 		private PlayerTeam team;
 		private IPlayer XHomieHost;
 		private IProfile profile;
 		private List<IPlayer> Boss;
-		private bool exceeds;
 		private bool msja;
 		private bool show;
 		private bool showPP;
@@ -55,6 +57,8 @@
 		private String[] border;
 		private String msjB;
 		private int numMsjt;
+		private IObjectText xhmsj1;
+		private IObjectText xhmsj2;
 		private String wcPP;
 		private Random random;
 		private Color TXTC;
@@ -66,35 +70,55 @@
 			if (canClone) {
 				if (OnlyHost) {
 					WantTheBoss();
-					if (AddT_Trigger(segundos * 1000, 0, "OnlyPartyBoss", "XH-10201", true)) {
-						this.XH10201 = true;
+					if(Game.GetSingleObjectByCustomID("XH-10201") == null){
+						if (AddT_Trigger(segundos * 1000, 0, "OnlyPartyBoss", "XH-10201", true)) {
+							this.XH10201 = true;
+						}
+					}else{
+						((IObjectTrigger)Game.GetSingleObjectByCustomID("XH-10201")).Trigger();
 					}
 				} else {
 					WantTheHomies();
-					if (AddT_Trigger(segundos * 1000, 0, "XHomieParty", "XH-10201", true)) {
-						this.XH10201 = true;
+					if(Game.GetSingleObjectByCustomID("XH-10201") == null){
+						if (AddT_Trigger(segundos * 1000, 0, "XHomieParty", "XH-10201", true)) {
+							this.XH10201 = true;
+						}
+					}else{
+						((IObjectTrigger)Game.GetSingleObjectByCustomID("XH-10201")).Trigger();
 					}
 				}
 
 				if (reincarnate) {
-					if (AddT_Trigger(200, 0, "Rencarnation", "XH-10202", true)) {
-						this.XH10202 = true;
+					if(Game.GetSingleObjectByCustomID("XH-10202") == null){
+						if (AddT_Trigger(200, 0, "Rencarnation", "XH-10202", true)) {
+							this.XH10202 = true;
+						}
+					}else{
+						((IObjectTrigger)Game.GetSingleObjectByCustomID("XH-10202")).Trigger();
 					}
 				}
 			}
 			if (autoReincarnate) {
-				if (AddD_Trigger("AutoReincarnate", "XH-10203")) {
-					this.XH10203 = true;
+				if(Game.GetSingleObjectByCustomID("XH-10203") == null){
+					if (AddD_Trigger("AutoReincarnate", "XH-10203")) {
+						this.XH10203 = true;
+					}
+				}else{
+					((IObjectTrigger)Game.GetSingleObjectByCustomID("XH-10203")).Trigger();
 				}
 			}
 			if (SHOWELC) {
-				if (AddT_Trigger(5000, 2, "Wci", "XH-10200", true)) {
-					this.XH10200 = true;
+				if(Game.GetSingleObjectByCustomID("XH-10200") == null){
+					if (AddT_Trigger(5000, 2, "Wci", "XH-10200", true)) {
+						this.XH10200 = true;
+					}
+				}else{
+					((IObjectTrigger)Game.GetSingleObjectByCustomID("XH-10200")).Trigger();
 				}
 			}
 			if (XH10201 && XH10202 && XH10203) {
 				wcPP = "XH-1024";  
-				Game.RunCommand("/MSG XHomieClonesParty: V1.3");
+				Game.RunCommand("/MSG XHomieClonesParty: V1.4");
 				msja = false;
 			} else {
 				if (!XH10200) {
@@ -117,8 +141,8 @@
 		public void WC(){
 			if (showPP) {
 				if (TITULO == "CLONES PARTY" && AUTK == wcPP && !msja) {
-					wcPP = "=========" + AUTHOR + " " + TITULO + "========" + msjB + WCR(msjr) + "\n==================================";
-					Game.ShowPopupMessage(wcPP, TXTC);
+					xhmsj1 = xhMSJ(AUTHOR + " " + TITULO ,TextAlignment.Middle,Color.Red, 1.5f , Game.GetCameraArea().Center + new Vector2(0,Game.GetCameraArea().Top - 50));
+					xhmsj2 = xhMSJ(msjB + WCR(msjr) ,TextAlignment.Middle,Color.White, 1.3f , xhmsj1.GetWorldPosition() + new Vector2 (0, -14));
 				} else if (wcPP != AUTK && canClone) {
 					wcPP = wcPP + "\nScript Not Autorized by XHomie";
 					Game.ShowPopupMessage(wcPP, TXTC);
@@ -127,8 +151,25 @@
 				}
 				showPP = false;
 			} else {
+				if(xhmsj1 != null){
+					xhmsj1.Remove();
+					xhmsj1 = null;
+				}
+				if(xhmsj2 != null){
+					xhmsj2.Remove();
+					xhmsj2 = null;
+				}
 				Game.HidePopupMessage();
 			}
+		}
+
+		private IObjectText xhMSJ(String txt, TextAlignment Al, Color color, float scale, Vector2 position){
+			IObjectText xhmsj = (IObjectText)Game.CreateObject("Text",position);
+			xhmsj.SetTextAlignment(Al);
+			xhmsj.SetText(txt);
+			xhmsj.SetTextColor(color);
+			xhmsj.SetTextScale(scale);
+			return xhmsj;
 		}
 
 		private String WCR(String[] amsj) {
@@ -166,27 +207,37 @@
 			} else {
 				Boss.Clear();
 			}
-			TXTC = Color.White;
+			TXTC = Color.Grey;
 			//"if you are a programmer or curious Those seeing this,maybe Could we create some things together  ('o')/ 
 			if (msjr == null) {
 				if (Lenguaje == "spanish" || Lenguaje == "hispana") {
 					msjr = new String[]{
-							"\n||                      Espero que te Diviertas!!! :)                    ||",
-							"\n||           Agradesco que te estes divirtiendo              ||\n||                            usando este script :)                           ||",
-							"\n||      Cualquier cosa, puedes contactarme visita   ||\n||    |XHomieClonesParty| en la pagina sfdmaps  :)  ||",
-							"\n||     Si tu crees que se podria agregarle algo,          ||\n||          A los clones dimelo y diviertete! :)                   ||"
+							"\n                           Espero que te Diviertas!!! :)",
+							"\n          Agradesco que te estes divirtiendo usando este script :)",
+							"\n             Cualquier cosa, puedes contactarme visita \n             |XHomieClonesParty| en la pagina sfdmaps  :)",
+							"\n                Si tu crees que se podria agregarle algo\n                    A los clones dimelo y diviertete! :)"
 					};
 
-					msjB = "\n|| Atl+A = Crear clon / Atl+D = Controlar tu Clon ||";
-				} else {
+					msjB = "\n         [KEY=WALKING]+[KEY=ATTACK] = Crear clon / [KEY=WALKING]+[KEY=BLOCK_AIM] = Controlar tu Clon ";
+				} else if(Lenguaje == "portugues"){
 					msjr = new String[]{
-							"\n||                           I hope you have fun !!  :)                        ||",
-							"\n||I thank you that you Have Fun with this script :)||",
-							"\n||           Anything you can contact me, visit              ||\n||      XHomieClonesParty in the page sfdmap ! :)    ||",
-							"\n||            if you think you can add something,             ||\n||          to the clones tell me and go have fun! :)        ||"
+							"\n                        Eu espero que você se divertir!!! :)                    ",
+							"\n                 Agradesco voce esta se divertindo              \n                              usando este script :)                           ",
+							"\n        Qualquer coisa, você pode entrar em contato eu   \n            |XHomieClonesParty| na página sfdmaps  :)  ",
+							"\n            Se voce acha que pode acrescentar algo         \n                  No clones Dimelo e se divertir! :)                  "
 					};
 
-					msjB = "\n||     Atl+A = Clone you  -  Atl+D = Control Clone    ||";
+					msjB = "[KEY=WALKING]+[KEY=ATTACK] = Criar clone / [KEY=WALKING]+[KEY=BLOCK_AIM] = Controle o seu Clone";
+				}
+				else {
+					msjr = new String[]{
+							"\n                         I hope you have fun !!  :)                        ",
+							"\n      I thank you that you Have Fun with this script :)",
+							"\n                Anything you can contact me, visit              \n          XHomieClonesParty in the page sfdmap ! :)    ",
+							"\n              if you think you can add something,             \n            to the clones tell me and go have fun! :)        "
+					};
+
+					msjB = "\n       [KEY=WALKING]+[KEY=ATTACK] = Clone you  -  [KEY=WALKING]+[KEY=BLOCK_AIM] = Control Clone    ";
 				}
 			}
 			if (txd == null) {
@@ -197,9 +248,15 @@
 				} else if (Lenguaje == "spanish") {
 
 					txd = new String[]{
-							"Aaah!","(...)", "Eso dolio P*to!" , "No! no! no!!" , "CoÃ±ooooo!", "Oh Nooooo!!", "Mierda!", "Joder !", "Un Manjar", "De P*ta Madre!", "CoÃ±o!", "CoÃ±o de tu madre!", "La P*ta que te pario!", "Nooooo...", "No!"
+							"Aaah!","(...)", "Eso dolio P*to!" , "No! no! no!!" , "Coñooooo!", "Oh Nooooo!!", "Mierda!", "Joder !", "Un Manjar", "De P*ta Madre!", "Coño!", "Coño de tu madre!", "La P*ta que te pario!", "Nooooo...", "No!"
 					};
-				} else {
+				} else if (Lenguaje == "portugues"){
+					txd = new String[]{
+							"Aaah!","(...)", "Filho de put*" , "Rapariga", "Boiola!" , "Veado!" , "Bambi!" , "P*ta!" , "No! no! no!!" , "a p*ta que te pariu", "Oh Nooooo!!", "b*rro de mais", "bosta!", "De P*ta Madre!", "Gonorrea chimba", "carallo!", "da p*ta!", "Nooooo...", "No!"
+					};
+				}
+
+				else {
 
 					txd = new String[]{
 							"Aaah!", "No! no! no!!", "That hurt men!" , "okey.." , "Why!?","Oh god why?", "Oh Nooooo!!" , "Ass S*cker" , "M*lf" , "Damn b*tch" , "C*mFace" , "P*ssy Face!" ,"F*ck Mother!" ,"F*ck!", "damit", "Really?", "(...)", "Son of a B...", "MotherF...", "a delicacy", "Fuuuu...", "Oh Sh*t!", "No!", "Noooo...", "Bull sh*t!"
@@ -227,6 +284,9 @@
 					if (showDialog && show) {
 						Game.PlayEffect("CFTXT", pl.GetWorldPosition() + new Vector2(0f, 30f), WCR(txd));
 					}
+					if(this.gameStart){
+						CheckClonesInGameOver();
+					}
 				}
 			} else {
 				finishim(pl, false);
@@ -234,22 +294,29 @@
 		}
 
 		private void WantTheHomies() {
+			int plc = 0;
 			foreach(IPlayer pl in Game.GetPlayers()){
 				if (pl.IsUser) {
-					Boss.Add(pl);
+					Boss.Add(pl);					
+					plc++;
+					if(plc > 1){
+						this.gameStart = true;
+					}
 				}
 			}
 		}
 
 		private void WantTheBoss() {
-			int first = 0;
+			int plc = 0;
 			foreach(IPlayer pl in Game.GetPlayers()){
-				if (first == 0) {
-					if (pl.IsUser) {
+				if (pl.IsUser) {
+					if(plc == 0){
 						XHomieHost = pl;
 						Boss.Add(pl);
-						first++;
-						break;
+					}
+					plc++;			
+					if(plc > 1){
+						this.gameStart = true;
 					}
 				}
 			}
@@ -291,8 +358,29 @@
 			}
 		}
 
+		private void CheckClonesInGameOver(){
+			int cl = 0;
+			String profile = null;
+			foreach(IPlayer pl in Game.GetPlayers()){
+				if(pl.IsUser){
+					cl++;
+					if(profile == null){
+						profile = pl.GetProfile().Name;
+					}
+				}
+			}
+			if(cl == 1){
+				foreach(IPlayer pl in Game.GetPlayers()){
+					if(pl.IsBot && pl.GetProfile().Name == profile){
+						Wow(pl.GetWorldPosition());
+						pl.Remove();
+					}
+				}
+			}
+		}
+
 		private void ClonIn(IPlayer Homies, bool Active) {
-			exceeds = false;
+			bool exceeds = false;
 			if (clonesLimited) {
 				int cont = 0;
 				foreach(IPlayer cl in Game.GetPlayers()){
@@ -306,7 +394,7 @@
 
 				}
 			}
-			if (!exceeds) {
+			if (!exceeds && ((reduceHealth && Homies.GetHealth() > HealthxClone) || !reduceHealth)) {
 				profile = Homies.GetProfile();
 				team = Homies.GetTeam();
 				IPlayer bot;
@@ -322,6 +410,9 @@
 				if(Homies.FacingDirection == -1)
 					bot.RunToPosition(bot.GetWorldPosition(), -1);
 				Game.PlaySound("ItemSpawn", bot.GetWorldPosition(), 30f);
+				if(reduceHealth){
+					Homies.SetHealth(Homies.GetHealth() - HealthxClone);
+				}
 				if (cloneSharedHealth) {
 					bot.SetHealth(Homies.GetHealth());
 				}
@@ -341,11 +432,13 @@
 				}
 				bot.SetTeam(team);
 				bot.SetProfile(profile);
-				if (Active) {
+				if (Active && (this.bot_T != BotType.TutorialA || team != PlayerTeam.Independent)) { // 1.4
 					bot.SetBotType(this.bot_T);
 					if(showDialog){
 						if (Lenguaje == "spanish" || Lenguaje == "hispana") {
 							Game.PlayEffect("CFTXT", Homies.GetWorldPosition() + new Vector2(0f, 30f), "Clon de Sombra Activa!");
+						} else if(Lenguaje == "portugues"){
+						Game.PlayEffect("CFTXT", Homies.GetWorldPosition() + new Vector2(0f, 30f), "Clon Sombra Activo!");
 						} else {
 							Game.PlayEffect("CFTXT", Homies.GetWorldPosition() + new Vector2(0f, 30f), "Kage Bunshin no Jutsu Active!");
 						}
@@ -355,17 +448,32 @@
 					if(showDialog){
 						if (Lenguaje == "spanish" || Lenguaje == "hispana") {
 							Game.PlayEffect("CFTXT", Homies.GetWorldPosition() + new Vector2(0f, 30f), "Clon de Sombra inactiva!");
-						} else {
+						}  else if(Lenguaje == "portugues"){
+						Game.PlayEffect("CFTXT", Homies.GetWorldPosition() + new Vector2(0f, 30f), "Sombra clone inativa!");
+						}else {
 							Game.PlayEffect("CFTXT", Homies.GetWorldPosition() + new Vector2(0f, 30f), "Kage Bunshin no Stay!");
 						}
 					}
 				}
 			} else {
 				if(showDialog){
-					if (Lenguaje == "spanish" || Lenguaje == "hispana") {
-						Game.PlayEffect("CFTXT", Homies.GetWorldPosition() + new Vector2(0f, 30f), "Limite de Clones!");
-					} else {
-						Game.PlayEffect("CFTXT", Homies.GetWorldPosition() + new Vector2(0f, 30f), "Limited of Clones!");
+					if(reduceHealth && Homies.GetHealth() <= HealthxClone){
+						if (Lenguaje == "spanish" || Lenguaje == "hispana") {
+							Game.PlayEffect("CFTXT", Homies.GetWorldPosition() + new Vector2(0f, 30f), "Baja Energia!");
+						} else if(Lenguaje == "portugues"){
+						Game.PlayEffect("CFTXT", Homies.GetWorldPosition() + new Vector2(0f, 30f), "baixa energia!");
+						}else {
+							Game.PlayEffect("CFTXT", Homies.GetWorldPosition() + new Vector2(0f, 30f), "Energy Low!");
+						}	
+					}
+					else{
+						if (Lenguaje == "spanish" || Lenguaje == "hispana") {
+							Game.PlayEffect("CFTXT", Homies.GetWorldPosition() + new Vector2(0f, 30f), "Limite de Clones!");
+						} else if(Lenguaje == "portugues"){
+							Game.PlayEffect("CFTXT", Homies.GetWorldPosition() + new Vector2(0f, 30f), "Limite Clones!");
+						}else {
+							Game.PlayEffect("CFTXT", Homies.GetWorldPosition() + new Vector2(0f, 30f), "Limited of Clones!");
+						}
 					}
 				}
 			}
@@ -375,7 +483,7 @@
 			foreach(IPlayer Homies in Boss){
 				if (Homies.GetProfile() == XHomieHost.GetProfile()) {
 					profile = Homies.GetProfile();
-					if (Homies.IsUser && Homies.IsMeleeAttacking && Homies.IsCrouching && Homies.IsWalking) {//&& !Homies.IsSprinting) {
+					if (Homies.IsUser && Homies.IsMeleeAttacking && Homies.IsCrouching && Homies.IsWalking) {
 						ClonIn(Homies, false);
 					} else if (Homies.IsUser && Homies.IsMeleeAttacking && !Homies.IsCrouching && Homies.IsWalking) {
 						ClonIn(Homies, true);
@@ -389,12 +497,17 @@
 			Game.PlaySound("GetSlomo", host.GetWorldPosition(), 30f);
 			Boss.Add(host);
 			Boss.Remove(anfitrion);
+			if(this.bot_T == BotType.TutorialA || team == PlayerTeam.Independent){ // 1.4
+				Active = false;
+			}
 			if (Active && live) {
 				anfitrion.SetBotType(this.bot_T);
 				if(showDialog){
 					if (Lenguaje == "spanish" || Lenguaje == "hispana") {
 						Game.PlayEffect("CFTXT", anfitrion.GetWorldPosition() + new Vector2(0f, 30f), "Cambio Activo!");
-					} else {
+					} else if(Lenguaje == "portugues"){
+						Game.PlayEffect("CFTXT", host.GetWorldPosition() + new Vector2(0f, 30f), "mudança ativa!");
+					}else {
 						Game.PlayEffect("CFTXT", anfitrion.GetWorldPosition() + new Vector2(0f, 30f), "Shintenshin no Jutsu Active!");
 					}
 				}
@@ -403,7 +516,9 @@
 				if(showDialog){
 					if (Lenguaje == "spanish" || Lenguaje == "hispana") {
 						Game.PlayEffect("CFTXT", anfitrion.GetWorldPosition() + new Vector2(0f, 30f), "Cambio Inactivo!");
-					} else {
+					} else if(Lenguaje == "portugues"){
+						Game.PlayEffect("CFTXT", host.GetWorldPosition() + new Vector2(0f, 30f), "off mudança");
+					}else {
 						Game.PlayEffect("CFTXT", anfitrion.GetWorldPosition() + new Vector2(0f, 30f), "Shintenshin no Jutsu Inactive!");
 					}
 				}
@@ -415,7 +530,10 @@
 			if(showDialog){
 				if (Lenguaje == "spanish" || Lenguaje == "hispana") {
 					Game.PlayEffect("CFTXT", host.GetWorldPosition() + new Vector2(0f, 30f), "Estoy Aqui!");
-				} else {
+				} else if(Lenguaje == "portugues"){
+					Game.PlayEffect("CFTXT", host.GetWorldPosition() + new Vector2(0f, 30f), "Estou aqui!");
+				}
+				else {
 					Game.PlayEffect("CFTXT", host.GetWorldPosition() + new Vector2(0f, 30f), "I'm Here!");
 				}
 			}

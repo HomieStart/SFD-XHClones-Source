@@ -5,7 +5,7 @@
 	// <===========         sugerencias o ideas para nuevos script :)          ===========>
 	// <==================================================================================>
 	// <=======================    Tr.x.Homie@gmail.com    ===============================>
-	// <======================= Â© 2015 By Freddy of XHomie ===============================>
+	// <======================= © 2015 By Freddy of XHomie ===============================>
 	// <==================================================================================>
 	// < = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = |>
 	// <==         SI TE SIRVIO, NO OLVIDES MENCIONAR Y AGRADECER BUEN HOMBRE ! :)      ==>
@@ -17,7 +17,7 @@
 		private int clonesQuantity = 2; // Maxima cantidad de clones
 		private bool clonesLimited = true; // Si hay limite para los clones
 		private bool canClone = true; // Si es true, puedes clonar
-		private bool OnlyHost = false; // Si es true, solo el dueÃ±o del server puede clonar
+		private bool OnlyHost = false; // Si es true, solo el dueño del server puede clonar
 		private bool OnPlayer = true; // Si es true, el clon se crea sobre el creador
 		private bool reincarnate = true; // Si puede rencarnar en un clon
 		private bool autoReincarnate = true; // Si puede rencarnar despues de morir
@@ -197,7 +197,7 @@
 				} else if (Lenguaje == "spanish") {
 
 					txd = new String[]{
-							"Aaah!","(...)", "Eso dolio P*to!" , "No! no! no!!" , "CoÃ±ooooo!", "Oh Nooooo!!", "Mierda!", "Joder !", "Un Manjar", "De P*ta Madre!", "CoÃ±o!", "CoÃ±o de tu madre!", "La P*ta que te pario!", "Nooooo...", "No!"
+							"Aaah!","(...)", "Eso dolio P*to!" , "No! no! no!!" , "Coñooooo!", "Oh Nooooo!!", "Mierda!", "Joder !", "Un Manjar", "De P*ta Madre!", "Coño!", "Coño de tu madre!", "La P*ta que te pario!", "Nooooo...", "No!"
 					};
 				} else {
 
@@ -563,16 +563,16 @@
 	}
 
 	private void cleanMachine(){
-		if(Game.GetSingleObjectByCustomID("XH-10201") != null)
+		if(Game.GetSingleObjectByCustomID("XH-10201") == null)
 			if(!Game.GetSingleObjectByCustomID("XH-10201").RemovalInitiated)
 				Game.GetSingleObjectByCustomID("XH-10201").Remove();
-		if(Game.GetSingleObjectByCustomID("XH-10202") != null)
+		if(Game.GetSingleObjectByCustomID("XH-10202") == null)
 			if(!Game.GetSingleObjectByCustomID("XH-10202").RemovalInitiated)
 				Game.GetSingleObjectByCustomID("XH-10202").Remove();
-		if(Game.GetSingleObjectByCustomID("XH-10203") != null)
+		if(Game.GetSingleObjectByCustomID("XH-10203") == null)
 			if(!Game.GetSingleObjectByCustomID("XH-10203").RemovalInitiated)
 				Game.GetSingleObjectByCustomID("XH-10203").Remove();
-		if(Game.GetSingleObjectByCustomID("XH-10200") != null)
+		if(Game.GetSingleObjectByCustomID("XH-10200") == null)
 			if(!Game.GetSingleObjectByCustomID("XH-10200").RemovalInitiated)
 				Game.GetSingleObjectByCustomID("XH-10200").Remove();
 		XH = null;

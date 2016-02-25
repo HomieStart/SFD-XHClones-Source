@@ -4,11 +4,11 @@
 
 //==== Solo si usas un Trigger Script ! ===============
 
-// --> CopyThisInYouTriggerScript <--- Copia este metodo dentro del metodo de tu Scripttrigger y colocale que funcione al inicio de la partida
+// --> CopyThisInYouTriggerScript <--- Copia este metodo dentro del metodo de tu Scrriptrigger y colocale que funcione al inicio de la partida
+
 
 // =========== y Copia todo el contenido de aqui para abajo sin cambiar nada =========>
-
-
+	
 	// <=========================== XHOMIE CODE V1.3 ! ===================================> 
 	// <==================================================================================>
 	// <=========== If you liked the "XHomieClonesParty", you can contact me, ============>
@@ -16,19 +16,19 @@
 	// <===========         suggestions or ideas for new script :)            ============>
 	// <==================================================================================>
 	// <========================    Tr.x.Homie@gmail.com    ==============================>
-	// <======================== Â© 2015 By Freddy of XHomie ==============================>
+	// <======================== © 2015 By Freddy of XHomie ==============================>
 	// <==================================================================================>
 	// < = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = |>
 	// <== IF THiS SERVED FOR YOU, DON'T FORGET NOT TO MENTION AND THANKS GOOD MAN ! :) ==>
 	// < = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = |>
 	public class XHCP{
 		// ======= Setting for you custom game, you can change ==========>
-		private String Lenguaje = "hispana";
+		private String Lenguaje = "spanish";
 		private int segundos = 1; // Intervalo para crear clones
 		private int clonesQuantity = 2; // Maxima cantidad de clones
 		private bool clonesLimited = true; // Si hay limite para los clones
 		private bool canClone = true; // Si es true, puedes clonar
-		private bool OnlyHost = false; // Si es true, solo el dueÃ±o del server puede clonar
+		private bool OnlyHost = false; // Si es true, solo el dueño del server puede clonar
 		private bool OnPlayer = true; // Si es true, el clon se crea sobre el creador
 		private bool reincarnate = true; // Si puede rencarnar en un clon
 		private bool autoReincarnate = true; // Si puede rencarnar despues de morir
@@ -210,7 +210,7 @@
 				} else if (Lenguaje == "spanish") {
 
 					txd = new String[]{
-							"Aaah!","(...)", "Eso dolio P*to!" , "No! no! no!!" , "CoÃ±ooooo!", "Oh Nooooo!!", "Mierda!", "Joder !", "Un Manjar", "De P*ta Madre!", "CoÃ±o!", "CoÃ±o de tu madre!", "La P*ta que te pario!", "Nooooo...", "No!"
+							"Aaah!","(...)", "Eso dolio P*to!" , "No! no! no!!" , "Coñooooo!", "Oh Nooooo!!", "Mierda!", "Joder !", "Un Manjar", "De P*ta Madre!", "Coño!", "Coño de tu madre!", "La P*ta que te pario!", "Nooooo...", "No!"
 					};
 				} else {
 
@@ -584,16 +584,16 @@
 	}
 
 	private void cleanMachine(){
-		if(Game.GetSingleObjectByCustomID("XH-10201") != null)
+		if(Game.GetSingleObjectByCustomID("XH-10201") == null)
 			if(!Game.GetSingleObjectByCustomID("XH-10201").RemovalInitiated)
 				Game.GetSingleObjectByCustomID("XH-10201").Remove();
-		if(Game.GetSingleObjectByCustomID("XH-10202") != null)
+		if(Game.GetSingleObjectByCustomID("XH-10202") == null)
 			if(!Game.GetSingleObjectByCustomID("XH-10202").RemovalInitiated)
 				Game.GetSingleObjectByCustomID("XH-10202").Remove();
-		if(Game.GetSingleObjectByCustomID("XH-10203") != null)
+		if(Game.GetSingleObjectByCustomID("XH-10203") == null)
 			if(!Game.GetSingleObjectByCustomID("XH-10203").RemovalInitiated)
 				Game.GetSingleObjectByCustomID("XH-10203").Remove();
-		if(Game.GetSingleObjectByCustomID("XH-10200") != null)
+		if(Game.GetSingleObjectByCustomID("XH-10200") == null)
 			if(!Game.GetSingleObjectByCustomID("XH-10200").RemovalInitiated)
 				Game.GetSingleObjectByCustomID("XH-10200").Remove();
 		XH = null;

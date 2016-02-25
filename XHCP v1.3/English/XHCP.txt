@@ -1,30 +1,30 @@
-	// <============================ XHOMIE CODE v1.3 ! ==================================> 
+	// <=========================== XHOMIE CODE v1.3 ! ===================================> 
 	// <==================================================================================>
-	// <=========== Si te gusto el "XHomieClonesParty", tu puedes contactarme, ===========>
-	// <===========            Yo estare atento a tus comentarios              ===========>
-	// <===========         sugerencias o ideas para nuevos script :)          ===========>
+	// <=========== If you liked the "XHomieClonesParty", you can contact me, ============>
+	// <===========        I will be delighted to attend thanks to            ============>
+	// <===========         suggestions or ideas for new script :)            ============>
 	// <==================================================================================>
-	// <=======================    Tr.x.Homie@gmail.com    ===============================>
-	// <======================= ¬© 2015 By Freddy of XHomie ===============================>
+	// <========================    Tr.x.Homie@gmail.com    ==============================>
+	// <======================== © 2015 By Freddy of XHomie ==============================>
 	// <==================================================================================>
 	// < = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = |>
-	// <==         SI TE SIRVIO, NO OLVIDES MENCIONAR Y AGRADECER, BUEN HOMBRE ! :)     ==>
+	// <== IF THiS SERVED FOR YOU, DON'T FORGET NOT TO MENTION AND THANKS GOOD MAN ! :) ==>
 	// < = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = |>
 	public class XHCP{
-		// <======= Setting for you custom game, you can change ==========>
-		private String Lenguaje = "hispana";
-		private int segundos = 1; // Intervalo para crear clones
-		private int clonesQuantity = 2; // Maxima cantidad de clones
-		private bool clonesLimited = true; // Si hay limite para los clones
-		private bool canClone = true; // Si es true, puedes clonar
-		private bool OnlyHost = false; // Si es true, solo el due√±o del server puede clonar
-		private bool OnPlayer = true; // Si es true, el clon se crea sobre el creador
-		private bool reincarnate = true; // Si puede rencarnar en un clon
-		private bool autoReincarnate = true; // Si puede rencarnar despues de morir
-		private bool showDialog = true; // Si muestran dialago de intercambios con el clon
-		private bool showDialog2 = true; // Si muestra dialogo despues de morir
-		private bool cloneSharedItems = false; // Si los clones tambien compartiran las mismas armas del creador
-		private bool cloneSharedHealth = true; // Si los clones comparten la energia del creador al invocarlos
+		// <======= Setting for you custom game, you can change =======>
+		private String Lenguaje = "english";
+		private int clonesQuantity = 2; // Quantity clones can be created
+		private int segundos = 1; //interval for creating Clones
+		private bool canClone = true; // if true, you can be creating clones
+		private bool OnlyHost = false; // if true, only host can clone
+		private bool OnPlayer = true; // if clone created in the position of the creator
+		private bool reincarnate = true; // if can reincarnate in the clones
+		private bool autoReincarnate = true; // if can reincarnate in the clone if exist, after die
+		private bool showDialog = true; // if show dialog of player whit clones
+		private bool showDialog2 = true; // if show dialog of player after die
+		private bool clonesLimited = true; // if limit for clones in game
+		private bool cloneSharedItems = false; // if true, clones can give weapos of the creator
+		private bool cloneSharedHealth = true; // if the clone shared health in creating
 
 		// <======= Propeties =========================================>
 		private const bool SHOW_PP_OST = true;
@@ -197,7 +197,7 @@
 				} else if (Lenguaje == "spanish") {
 
 					txd = new String[]{
-							"Aaah!","(...)", "Eso dolio P*to!" , "No! no! no!!" , "Co√±ooooo!", "Oh Nooooo!!", "Mierda!", "Joder !", "Un Manjar", "De P*ta Madre!", "Co√±o!", "Co√±o de tu madre!", "La P*ta que te pario!", "Nooooo...", "No!"
+							"Aaah!","(...)", "Eso dolio P*to!" , "No! no! no!!" , "CoÒooooo!", "Oh Nooooo!!", "Mierda!", "Joder !", "Un Manjar", "De P*ta Madre!", "CoÒo!", "CoÒo de tu madre!", "La P*ta que te pario!", "Nooooo...", "No!"
 					};
 				} else {
 
