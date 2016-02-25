@@ -1,5 +1,6 @@
 XHCP v1.4: Add Reduce Energy for make a clone (Anti-Bad Players)
 	   Clones of Independent Team, now Not Move and not Attack you
+	   Add Portugues Lenguaje
 	   Other Details
 XHCP v1.3: more optimal and add a few small details 
-XHCP v1.2: Versión exported of the script for can make Clones in You Game!
+XHCP v1.2: VersiÃ³n exported of the script for can make Clones in You Game!
