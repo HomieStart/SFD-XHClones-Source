@@ -5,7 +5,7 @@
 	// <===========         sugerencias o ideas para nuevos script :)          ===========>
 	// <==================================================================================>
 	// <=======================    Tr.x.Homie@gmail.com    ===============================>
-	// <======================= © 2015 By Freddy of XHomie ===============================>
+	// <======================= Â© 2015 By Freddy of XHomie ===============================>
 	// <==================================================================================>
 	// < = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = |>
 	// <==         SI TE SIRVIO, NO OLVIDES MENCIONAR Y AGRADECER, BUEN HOMBRE ! :)      ==>
@@ -19,13 +19,13 @@
 		private bool reduceHealth = true; // Reducir la energia al crear clon
 		private bool clonesLimited = true; // Si hay limite para los clones
 		private bool canClone = true; // Si es true, puedes clonar
-		private bool OnlyHost = false; // Si es true, solo el dueño del server puede clonar
+		private bool OnlyHost = false; // Si es true, solo el dueÃ±o del server puede clonar
 		private bool OnPlayer = true; // Si es true, el clon se crea sobre el creador
 		private bool reincarnate = true; // Si puede rencarnar en un clon
 		private bool autoReincarnate = true; // Si puede rencarnar despues de morir
 		private bool showDialog = true; // Si muestran dialago de intercambios con el clon
 		private bool showDialog2 = true; // Si muestra dialogo despues de morir
-		private bool cloneSharedItems = false; // Si los clones tambien compartiran las mismas armas del creador
+		private bool cloneSharedItems = true; // Si los clones tambien compartiran las mismas armas del creador
 		private bool cloneSharedHealth = true; // Si los clones comparten la energia del creador al invocarlos
 
 		// <======= Propeties =========================================>
@@ -221,9 +221,9 @@
 					msjB = "\n         [KEY=WALKING]+[KEY=ATTACK] = Crear clon / [KEY=WALKING]+[KEY=BLOCK_AIM] = Controlar tu Clon ";
 				} else if(Lenguaje == "portugues"){
 					msjr = new String[]{
-							"\n                        Eu espero que você se divertir!!! :)                    ",
+							"\n                        Eu espero que vocÃª se divertir!!! :)                    ",
 							"\n                 Agradesco voce esta se divertindo              \n                              usando este script :)                           ",
-							"\n        Qualquer coisa, você pode entrar em contato eu   \n            |XHomieClonesParty| na página sfdmaps  :)  ",
+							"\n        Qualquer coisa, vocÃª pode entrar em contato eu   \n            |XHomieClonesParty| na pÃ¡gina sfdmaps  :)  ",
 							"\n            Se voce acha que pode acrescentar algo         \n                  No clones Dimelo e se divertir! :)                  "
 					};
 
@@ -248,7 +248,7 @@
 				} else if (Lenguaje == "spanish") {
 
 					txd = new String[]{
-							"Aaah!","(...)", "Eso dolio P*to!" , "No! no! no!!" , "Coñooooo!", "Oh Nooooo!!", "Mierda!", "Joder !", "Un Manjar", "De P*ta Madre!", "Coño!", "Coño de tu madre!", "La P*ta que te pario!", "Nooooo...", "No!"
+							"Aaah!","(...)", "Eso dolio P*to!" , "No! no! no!!" , "CoÃ±ooooo!", "Oh Nooooo!!", "Mierda!", "Joder !", "Un Manjar", "De P*ta Madre!", "CoÃ±o!", "CoÃ±o de tu madre!", "La P*ta que te pario!", "Nooooo...", "No!"
 					};
 				} else if (Lenguaje == "portugues"){
 					txd = new String[]{
@@ -506,7 +506,7 @@
 					if (Lenguaje == "spanish" || Lenguaje == "hispana") {
 						Game.PlayEffect("CFTXT", anfitrion.GetWorldPosition() + new Vector2(0f, 30f), "Cambio Activo!");
 					} else if(Lenguaje == "portugues"){
-						Game.PlayEffect("CFTXT", host.GetWorldPosition() + new Vector2(0f, 30f), "mudança ativa!");
+						Game.PlayEffect("CFTXT", host.GetWorldPosition() + new Vector2(0f, 30f), "mudanÃ§a ativa!");
 					}else {
 						Game.PlayEffect("CFTXT", anfitrion.GetWorldPosition() + new Vector2(0f, 30f), "Shintenshin no Jutsu Active!");
 					}
@@ -517,7 +517,7 @@
 					if (Lenguaje == "spanish" || Lenguaje == "hispana") {
 						Game.PlayEffect("CFTXT", anfitrion.GetWorldPosition() + new Vector2(0f, 30f), "Cambio Inactivo!");
 					} else if(Lenguaje == "portugues"){
-						Game.PlayEffect("CFTXT", host.GetWorldPosition() + new Vector2(0f, 30f), "off mudança");
+						Game.PlayEffect("CFTXT", host.GetWorldPosition() + new Vector2(0f, 30f), "off mudanÃ§a");
 					}else {
 						Game.PlayEffect("CFTXT", anfitrion.GetWorldPosition() + new Vector2(0f, 30f), "Shintenshin no Jutsu Inactive!");
 					}
