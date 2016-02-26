@@ -497,7 +497,7 @@
 			Game.PlaySound("GetSlomo", host.GetWorldPosition(), 30f);
 			Boss.Add(host);
 			Boss.Remove(anfitrion);
-			if(this.bot_T == BotType.TutorialA || team == PlayerTeam.Independent){ // 1.4
+			if(this.bot_T == BotType.TutorialA && team == PlayerTeam.Independent){ // 1.4
 				Active = false;
 			}
 			if (Active && live) {
